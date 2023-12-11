@@ -4,7 +4,6 @@ import cors from 'cors';
 import sendgrid from '@sendgrid/mail';
 
 sendgrid.setApiKey(process.env.SENDGRID_API_KEY || '');
-
 const app = express();
 app.use(cors());
 app.use(express.json());
