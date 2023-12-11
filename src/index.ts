@@ -8,7 +8,7 @@ sendgrid.setApiKey(process.env.SENDGRID_API_KEY || '');
 const app = express();
 app.use(cors());
 app.use(express.json());
-const port = Number(process.env.PORT) || 3000;
+const port = Number(process.env.PORT);
 
 app.post('/sendmail', async (req: Request, res: Response) => {
     const subject = req.body.subject;
